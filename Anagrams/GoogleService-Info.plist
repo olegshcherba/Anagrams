@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>51156515477-ruqcuq7bvd4qktth876ui7sf46t2fifv.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.51156515477-ruqcuq7bvd4qktth876ui7sf46t2fifv</string>
+	<key>API_KEY</key>
+	<string>AIzaSyB7beObwEhqce5CAxRw0SE4-JCxDd3txEg</string>
+	<key>GCM_SENDER_ID</key>
+	<string>51156515477</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.OlegShcherba.Anagrams</string>
+	<key>PROJECT_ID</key>
+	<string>anagrams-545fe</string>
+	<key>STORAGE_BUCKET</key>
+	<string>anagrams-545fe.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false/>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false/>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true/>
+	<key>IS_GCM_ENABLED</key>
+	<true/>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true/>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:51156515477:ios:17e15bfad7857f8a</string>
+	<key>DATABASE_URL</key>
+	<string>https://anagrams-545fe.firebaseio.com</string>
+</dict>
+</plist>
