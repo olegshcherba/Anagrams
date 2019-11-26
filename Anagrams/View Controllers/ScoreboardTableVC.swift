@@ -47,6 +47,9 @@ class ScoreboardTableVC: UIViewController, UITableViewDelegate, UITableViewDataS
   
   override func viewDidLoad() {
     super.viewDidLoad()
+    if #available(iOS 13.0, *) {
+      overrideUserInterfaceStyle = .light
+    }
     tableView.dataSource = self
     tableView.delegate = self
     configureScoreboardTableVCUIElements()
@@ -95,7 +98,7 @@ class ScoreboardTableVC: UIViewController, UITableViewDelegate, UITableViewDataS
       self.configureSection1Text(for: cell, with: user, at: indexPath)
       self.configureCellColor(for: cell, with: user, at: indexPath)
     } else {
-      cell.backgroundColor = .flatWhite
+      cell.backgroundColor = .flatWhite()
       configureSection0Text(for: cell)
     }
     return cell
@@ -108,7 +111,7 @@ class ScoreboardTableVC: UIViewController, UITableViewDelegate, UITableViewDataS
     if user.userID == GameBase.userID {
       cell.self.backgroundColor = UIColor(hexString: "#1f5e54")
     } else {
-      cell.self.backgroundColor = .flatWhite
+      cell.self.backgroundColor = .flatWhite()
     }
   }
   
@@ -206,7 +209,7 @@ class ScoreboardTableVC: UIViewController, UITableViewDelegate, UITableViewDataS
       navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(self.cancelTapped))
       navigationController?.navigationBar.backgroundColor = UIColor(hexString: "#1f5e54")
       navigationItem.leftBarButtonItem = UIBarButtonItem(title: "Cancel", style: .plain, target: self, action: #selector(self.cancelTapped))
-      navigationItem.leftBarButtonItem?.tintColor = .flatWhite
+      navigationItem.leftBarButtonItem?.tintColor = .flatWhite()
     }
   }
   

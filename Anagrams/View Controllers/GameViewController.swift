@@ -81,6 +81,9 @@ class GameViewController: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
+    if #available(iOS 13.0, *) {
+      overrideUserInterfaceStyle = .light
+    }
     configureGameViewControllerUIElements()
     setLifeImages()
     updateLivesAndButtons()
@@ -147,11 +150,11 @@ class GameViewController: UIViewController {
   func timerColor() {
     switch GameBase.seconds {
     case 11...20:
-      timerLabel.textColor = UIColor.flatOrange
+      timerLabel.textColor = UIColor.flatOrange()
     case 0...10:
-      timerLabel.textColor = UIColor.flatRed
+      timerLabel.textColor = UIColor.flatRed()
     default:
-      timerLabel.textColor = UIColor.flatBlack
+      timerLabel.textColor = UIColor.flatBlack()
     }
   }
   
@@ -310,10 +313,10 @@ class GameViewController: UIViewController {
   func updateLivesAndButtons() {
     switch GameBase.lives {
     case 2:
-      life3ImageView.tintColor = .flatWhiteDark
+      life3ImageView.tintColor = .flatWhiteDark()
     case 1:
-      life2ImageView.tintColor = .flatWhiteDark
-      life3ImageView.tintColor = .flatWhiteDark
+      life2ImageView.tintColor = .flatWhiteDark()
+      life3ImageView.tintColor = .flatWhiteDark()
       
       if GameBase.score == 0 {
         skipButton.isHidden = true
@@ -324,9 +327,9 @@ class GameViewController: UIViewController {
       }
       
     case 0:
-      life1ImageView.tintColor = .flatWhiteDark
-      life2ImageView.tintColor = .flatWhiteDark
-      life3ImageView.tintColor = .flatWhiteDark
+      life1ImageView.tintColor = .flatWhiteDark()
+      life2ImageView.tintColor = .flatWhiteDark()
+      life3ImageView.tintColor = .flatWhiteDark()
       
     default:
       life3ImageView.tintColor = UIColor(hexString: "#1f5e54")
@@ -354,7 +357,7 @@ class GameViewController: UIViewController {
   func configureGameViewControllerUIElements() {
     restartButton.tintColor = UIColor(hexString: "#1f5e54")
     skipButton.tintColor = UIColor(hexString: "#1f5e54")
-    self.view.backgroundColor = .flatWhite
+    self.view.backgroundColor = .flatWhite()
     let backgroundImage = UIImage(named: "Settings.jpg")
     let imageView = UIImageView(image: backgroundImage)
     imageView.frame = view.bounds

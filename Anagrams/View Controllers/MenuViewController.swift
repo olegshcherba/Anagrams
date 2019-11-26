@@ -53,7 +53,7 @@ class MenuViewController: UIViewController {
   
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     let backItem = UIBarButtonItem()
-    backItem.tintColor = .flatWhite
+    backItem.tintColor = .flatWhite()
     navigationController?.navigationBar.barStyle = .black
     navigationItem.backBarButtonItem = backItem
     
@@ -72,24 +72,24 @@ class MenuViewController: UIViewController {
     view.backgroundColor = UIColor(patternImage: UIImage(named: "Menu1.jpg")!)
     playButton.contentEdgeInsets.left = 15
     playButton.contentEdgeInsets.right = 15
-    playButton.tintColor = .flatBlack
-    playButton.backgroundColor = .flatSand
+    playButton.tintColor = .flatBlack()
+    playButton.backgroundColor = .flatSand()
     playButton.layer.cornerRadius = 10
     playButton.layer.borderWidth = 1
-    playButton.layer.borderColor = UIColor.flatCoffeeDark.cgColor
+    playButton.layer.borderColor = UIColor.flatCoffeeDark().cgColor
     settingsButton.contentEdgeInsets.left = 15
     settingsButton.contentEdgeInsets.right = 15
     settingsButton.layer.cornerRadius = 10
-    settingsButton.tintColor = .flatBlack
-    settingsButton.backgroundColor = .flatSand
+    settingsButton.tintColor = .flatBlack()
+    settingsButton.backgroundColor = .flatSand()
     settingsButton.layer.borderWidth = 1
-    settingsButton.layer.borderColor = UIColor.flatCoffeeDark.cgColor
+    settingsButton.layer.borderColor = UIColor.flatCoffeeDark().cgColor
     scoreboardButton.contentEdgeInsets.left = 15
     scoreboardButton.contentEdgeInsets.right = 15
     scoreboardButton.layer.cornerRadius = 10
-    scoreboardButton.tintColor = .flatBlack
-    scoreboardButton.backgroundColor = .flatSand
+    scoreboardButton.tintColor = .flatBlack()
+    scoreboardButton.backgroundColor = .flatSand()
     scoreboardButton.layer.borderWidth = 1
-    scoreboardButton.layer.borderColor = UIColor.flatCoffeeDark.cgColor
+    scoreboardButton.layer.borderColor = UIColor.flatCoffeeDark().cgColor
   }
 }

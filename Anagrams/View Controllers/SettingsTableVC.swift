@@ -50,6 +50,9 @@ class SettingsTableVC: UITableViewController {
     configureSettingsTableVCUIElements()
     self.navigationItem.largeTitleDisplayMode = .never
     self.navigationItem.largeTitleDisplayMode = .always
+    if #available(iOS 13.0, *) {
+    overrideUserInterfaceStyle = .light
+    }
   }
   
   override func viewWillAppear(_ animated: Bool) {
@@ -146,11 +149,11 @@ class SettingsTableVC: UITableViewController {
   
     switch category.difficulty {
     case .easy:
-      difficultyLabel.textColor = UIColor.flatGreen
+      difficultyLabel.textColor = UIColor.flatGreen()
     case .medium:
-      difficultyLabel.textColor = UIColor.flatOrange
+      difficultyLabel.textColor = UIColor.flatOrange()
     case .hard:
-      difficultyLabel.textColor = UIColor.flatRed
+      difficultyLabel.textColor = UIColor.flatRed()
     }
   }
   
@@ -166,7 +169,7 @@ class SettingsTableVC: UITableViewController {
   //MARK: - Cofigure UI Elements
   
   func configureSettingsTableVCUIElements() {
-    self.navigationItem.rightBarButtonItem?.tintColor = UIColor.flatWhite
+    self.navigationItem.rightBarButtonItem?.tintColor = UIColor.flatWhite()
     let backgroundImage = UIImage(named: "Settings.jpg")
     let imageView = UIImageView(image: backgroundImage)
     self.tableView.backgroundView = imageView
